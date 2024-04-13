@@ -27,6 +27,9 @@ const addTodo = () => {
 
   input_content.value = ''
   input_category.value = null
+  name.value= ''
+ 
+
 
 }
 const removeTodo = todos =>{
@@ -78,23 +81,25 @@ onMounted(()=>{
          v-model="input_content"/>
         <h4>Pick a category</h4>
         <div class="options">
-          <label for="" class="bubble-important">
+          <label for="" class="bubble">
             <input 
             type="radio"
              name="category" 
              id="category1"
              value="Important"
+             class="inportant"
              v-model="input_category">
              <span class="buble-important"></span>
              <div> Important </div>
           </label>
 
-          <label for="" class="bubble-trivial">
+          <label for="" class="bubble">
             <input 
             type="radio"
              name="category" 
              id="category2"
              value="Trivial"
+             class="trivial"
              v-model="input_category">
              <span class="bubble-Trivial"></span>
              <div> Trivial </div>
@@ -116,7 +121,7 @@ onMounted(()=>{
     </section>
 
     <section class="todo-list ">
-      <h3> Todo List</h3>
+      <h3>Todo List</h3>
       <div 
       v-for="todos in todo_list" 
       class="todo-items">
@@ -125,7 +130,7 @@ onMounted(()=>{
            type="checkbox" 
            v-model="todos.done"
             id="">
-            <span class="`bubble ${todos.category}`"></span>
+            <span></span>
         </label>
         <div class="todo-content ">
           <input type="text" 
@@ -135,7 +140,8 @@ onMounted(()=>{
         </div>
 
         <div class="actions">
-          <button class="delete" @click="removeTodo(todos)">Delete</button>
+          <button class="delete" 
+          @click="removeTodo(todos)">Delete</button>
         </div>
       
 

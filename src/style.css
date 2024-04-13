@@ -37,11 +37,11 @@
   }
 
   .create_todo h3{
-  text-align: center;
+ 
   font-size: 2em;
   }
   form h4{
-font-size: 25px;
+font-size: 15px;
   }
 
 form .options{
@@ -52,7 +52,7 @@ form .options{
 
 .todo-button{
     background-color: orangered;
-    width: 600px;
+    width: 400px;
     height: 40px;
     margin-top: 15px;
     color: #fff;
@@ -102,10 +102,10 @@ form .input{
 .todo-list h3{
     font-size: 30px;
 }
-.bubble-important, .bubble-trivial{
+.bubble{
     background-color: #000;
     color: #fff;
-    width: 100px;
+    width: 80px;
     height: 50px;
     padding: 10px;
     box-shadow: 5px 5px 5px orangered;
@@ -115,7 +115,7 @@ form .input{
     
 }
 
-.bubble-important input[type = 'radio']{
+.bubble .trivial input[type = 'radio']{
 accent-color: purple;
 
 }
