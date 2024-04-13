@@ -1,0 +1,125 @@
+*{
+   
+    background-color: #000;
+    
+    color: #fff;
+
+}
+
+.app{
+  
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 1em;
+    border-radius: 2em;
+    width: 700px;
+    height: 600px;
+    display: inline-block ;
+    justify-content: center;
+   padding-left: 30px;
+  
+}
+
+.greeting{
+
+
+    
+   
+  }
+
+  .greeting input{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+  }
+  .greeting input :placeholder{
+    color: #fff;
+  }
+
+  .create_todo h3{
+  text-align: center;
+  font-size: 2em;
+  }
+  form h4{
+font-size: 25px;
+  }
+
+form .options{
+    display: flex;
+    gap: 5em;
+    
+}
+
+.todo-button{
+    background-color: orangered;
+    width: 600px;
+    height: 40px;
+    margin-top: 15px;
+    color: #fff;
+    font-size: large;
+    border-radius: 15px 0 15px 0;
+    outline: none;
+    border: none;
+
+}
+.todo-items{
+   display: flex;
+   gap: 10px;
+   padding: 10px;
+
+}
+
+.todo-items input{
+    
+}
+
+form .input{
+    width: 300px;
+    height: 40px;
+    border-radius: 0 10px 0 10px  ;
+    font-size: 15px;
+    padding-left: 10px;
+    border: 1px solid orangered;
+    
+}
+
+.todo-list input{
+    border: none;
+    font-size: 15px;
+}
+
+.todo-list button{
+    background-color: orangered;
+    color: #fff;
+    outline: none;
+    border: none;
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+   
+}
+
+.todo-list h3{
+    font-size: 30px;
+}
+.bubble-important, .bubble-trivial{
+    background-color: #000;
+    color: #fff;
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px orangered;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 2em;
+    
+}
+
+.bubble-important input[type = 'radio']{
+accent-color: purple;
+
+}
+.bubble-trivial input[type = 'radio']{
+    accent-color: rgb(235, 16, 53);
+    
+    }
