@@ -1,9 +1,11 @@
 <script setup>
+import Todolist from './Todolist.vue'
 
-
-import { computed, onMounted, ref, watch } from "vue";
+import { computed, onMounted, reactive, ref, watch } from "vue";
 const todo = ref([])
 const name = ref('')
+let done = ''
+
 
 const input_content = ref('')
 const input_category = ref(null)
@@ -12,6 +14,14 @@ const todo_list = computed(()=>todo.value.sort((a, b)  => {
 
 
 }))
+
+const style = () =>{
+  if(this.todo.done){
+done.push('done')
+  }
+}
+
+
 
 const addTodo = () => {
   if(input_content.value.trim( ) === '' || input_category.value === null){
@@ -52,6 +62,7 @@ onMounted(()=>{
   name.value = localStorage.getItem('name') || ''
   todo.value = JSON.parse(localStorage.getItem('todo') || [])
 })
+
  
 
 </script>
@@ -127,21 +138,31 @@ onMounted(()=>{
       class="todo-items">
         <label for="" class="">
           <input
-           type="checkbox" 
+           type="checkbox"
            v-model="todos.done"
-            id="">
+            id="" 
+            @click="style"
+           >
             <span></span>
         </label>
         <div class="todo-content ">
           <input type="text" 
           id="" 
-          v-model="todos.content">
+          v-model="todos.content"
+          @click="style"
+        
+         >
 
         </div>
 
         <div class="actions">
           <button class="delete" 
           @click="removeTodo(todos)">Delete</button>
+
+          <button class="delete" 
+          @click="start">start</button>
+
+        
         </div>
       
 
@@ -150,10 +171,14 @@ onMounted(()=>{
 
    
   </main>
+
+  <Todolist/>
   
 </template>
 
 <style>
 
-
+.done{
+  text-decoration: line-through;
+}
 </style>

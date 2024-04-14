@@ -16,16 +16,11 @@
     height: 600px;
     display: inline-block ;
     justify-content: center;
-   padding-left: 30px;
+   margin-left: 10px;
   
 }
 
-.greeting{
 
-
-    
-   
-  }
 
   .greeting input{
     background-color: transparent;
@@ -52,7 +47,7 @@ form .options{
 
 .todo-button{
     background-color: orangered;
-    width: 400px;
+    width: 300px;
     height: 40px;
     margin-top: 15px;
     color: #fff;
@@ -86,6 +81,7 @@ form .input{
 .todo-list input{
     border: none;
     font-size: 15px;
+    outline: none;
 }
 
 .todo-list button{
@@ -96,9 +92,10 @@ form .input{
     width: 100px;
     height: 30px;
     font-size: 15px;
+    margin-left: 10px;
    
 }
-
+.todo
 .todo-list h3{
     font-size: 30px;
 }
@@ -123,3 +120,6 @@ accent-color: purple;
     accent-color: rgb(235, 16, 53);
     
     }
+.done{
+    text-decoration: overline;
+}
